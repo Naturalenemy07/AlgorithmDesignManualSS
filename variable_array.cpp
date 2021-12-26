@@ -1,37 +1,26 @@
 #include <iostream>
 #include <vector>
-#include <string>
 
 int main() {
-    //get input for number of arrays
-    int num_arr;
-    int num_que;
+    //get input for number of arrays and queries
+    int num_arr, num_que, temp_vect_len, element;
+    std::cin >> num_arr >> num_que;
     
-    std::cin >> num_arr;
-    std::cin >> num_que;
+    //required number of vectors as a vector of vectors
+    std::vector<std::vector<int>> vector_space;
     
-    //build labels for vectors, store in array
-    std::string arr[num_arr];
-    for(int dummy_c = 0; dummy_c < num_arr; dummy_c++) {
-        std::string label = "array_" + std::to_string(dummy_c + 1);
-        arr[dummy_c] = label;
-        
-        int arr_len;
-        std::cin >> arr_len;
-        std::vector<int> arr[dummy_c];
-        for(int dummy_e = 0; dummy_e < arr_len; dummy_e++) {
-            int temp_int;
-            std::cin >> temp_int;
-            arr[dummy_c].push_back (temp_int);
+    //build vectors
+    for(int i = 0; i < num_arr; i++) {
+        std::vector<int> vect;
+        std::cin >> temp_vect_len;
+        for(int j = 0; j < temp_vect_len; j++) {
+            std::cin >> element;
+            vect.push_back(element);            
         }
+        vector_space.push_back(vect);
     }
     
-    for(int dummy_a = 0; dummy_a < num_arr; dummy_a++) {
-        for(std::vector<int>::iterator it = arr[dummy_a].begin() ; it != arr[dummy_a].end(); ++it) {
-            std::cout << *it;
-        }
-    }
+    std::cout << vector_space[1][3];
     
     return 0;
-    
 }
