@@ -12,7 +12,7 @@ int main() {
     }
     
     
-    //outpur array in reverse order
+    //output array in reverse order
     for(int dummy_o = n - 1; dummy_o >=0; dummy_o--) {
         std::cout << arr[dummy_o] << " ";
     }
