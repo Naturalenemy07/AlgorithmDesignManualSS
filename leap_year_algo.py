@@ -1,4 +1,4 @@
-def is_leap_cubic(year):
+def is_leap_linear(year):
     leap = False
     
     if year % 4 == 0:
@@ -16,4 +16,4 @@ def is_leap_cubic(year):
 
     
 year = int(input())
-print(is_leap_cubic(year))
+print(is_leap_linear(year))
