@@ -16,21 +16,27 @@ if __name__ == '__main__':
         temp_names.append(record[0])
         temp_scores.append(record[1])
     
-    print(temp_scores)
+    # Go through scores and get the second lowest grade, set indexes in a list
+    sls = 0
+    sorted_temp_scores = temp_scores.copy()
+    sorted_temp_scores.sort()
+    r_sorted_temp_scores = sorted_temp_scores.copy()
+    for i in sorted_temp_scores:
+        if i == sorted_temp_scores[0]:
+            r_sorted_temp_scores.remove(i)
+    sls = r_sorted_temp_scores[0]
     
-    # Go through scores and get the second lowest grade, set index
-    shs = 0
-    shsIndex = 0
-    for i in range(len(temp_scores)):
-        pass
-
+    slIndexes = []
+    for j in range(0,len(temp_scores)):
+        if temp_scores[j] == sls:
+            slIndexes.append(j)
+    
     # get indexes with the highest score
-    shNames = []
-    for i in range(0, len(temp_scores)):
-        if temp_scores[i] == shs:
-            shNames.append(temp_names[i])
+    slNames = []
+    for k in slIndexes:
+        slNames.append(temp_names[k])
     
     # sort and print
-    shNames.sort()
-    for i in shNames:
+    slNames.sort()
+    for i in slNames:
         print(i)
