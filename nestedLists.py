@@ -17,7 +17,7 @@ if __name__ == '__main__':
         temp_scores.append(record[1])
     
     # Go through scores and get the second lowest grade, set indexes in a list
-    # we cannot assume that there is only 1 highest score
+    # we cannot assume that there is only 1 lowest grade
     sls = 0
     sorted_temp_scores = temp_scores.copy()
     sorted_temp_scores.sort()
