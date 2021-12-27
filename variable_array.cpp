@@ -3,7 +3,7 @@
 
 int main() {
     //get input for number of arrays and queries
-    int num_arr, num_que, temp_vect_len, element, temp_index_num, temp_element_num;
+    int num_arr, num_que, temp_vect_len, element, ans_index, ans_element;
     std::cin >> num_arr >> num_que;
     
     //required number of vectors as a vector of vectors
@@ -23,22 +23,11 @@ int main() {
     //initialize index array and element array
     int index_array[num_que], element_array[num_que];    
     
-    //input indexes into index_array[]
+    //print out answers
     for(int i = 0; i < num_que; i++) {
-        std::cin >> temp_index_num;
-        index_array[i] = temp_index_num;        
+        std::cin >> ans_index >> ans_element;
+        std::cout << vector_space[ans_index][ans_element] << std::endl;
     }
     
-    //input element queries into element array[]
-    for(int i = 0; i < num_que; i++) {
-        std::cin >> temp_element_num;
-        element_array[i] = temp_element_num;
-    }
-    
-    //print out specific elements
-    for(int i = 0; i < num_que; i++) {
-        std::cout << vector_space[index_array[i]][element_array[i]] << std::endl;
-    }
-        
     return 0;
 }
