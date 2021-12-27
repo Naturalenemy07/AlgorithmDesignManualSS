@@ -1,5 +1,5 @@
-num_scores = int(input())
-scores = list(map(int, input().split()))
+num_scores = int(input("Enter total number of scores: "))
+scores = list(map(int, input("Enter all scores with a space between them: ").split()))
 
 scores.sort(reverse = True)
 
