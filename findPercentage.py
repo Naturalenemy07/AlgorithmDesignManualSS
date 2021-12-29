@@ -13,5 +13,6 @@ if __name__ == '__main__':
     sums = 0
     for score in student_marks[query_name]:
         sums += score
+        
     # print average, make 2 decimals
     print(format(sums/len(student_marks[query_name]),'.2f'))
