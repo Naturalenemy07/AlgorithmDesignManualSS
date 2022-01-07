@@ -11,12 +11,22 @@ class Student {
     private:
         vector<int> scores;
         
-        void input() {
-        
-        }
     public:
-        int calculateTotalScore(vector<int> scores) {
+        void input() {
+            int temp_score;
+            //hard coded to accept 5 scores per problem statement
+            for(int i =0; i < 5; i++) {
+                cin >> temp_score;
+                scores.push_back(temp_score);
+            }
+        }
         
+        int calculateTotalScore() {
+            int sum_score = 0;
+            for(vector<int>::size_type j = 0; j != scores.size(); j++) {
+                sum_score += scores[j];
+            }
+            return sum_score;
         }
 };
 
