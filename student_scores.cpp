@@ -8,16 +8,16 @@ using namespace std;
 
 //My code
 class Student {
-    public:
+    private:
         vector<int> scores;
         
-    void input() {
+        void input() {
         
-    }
-    
-    int calculateTotalScore(vector<int> scores) {
+        }
+    public:
+        int calculateTotalScore(vector<int> scores) {
         
-    }
+        }
 };
 
 //HR code
