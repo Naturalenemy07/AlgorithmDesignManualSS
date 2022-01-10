@@ -20,3 +20,8 @@ def count_substring(string, sub_string):
         if string[elem:elem+lensub] == sub_string:
             matches += 1
     return matches
+
+def mutate_string(string, position, character):
+    # slice and join
+    constring = string[:position] + character + string[position+1:]
+    return constring
