@@ -45,3 +45,10 @@ def aadlu(s):
         if elem.isupper():
             upper = True
     return(alnum, alpha, digit, lower, upper)
+
+def wrap(string, max_width):
+    wrapped_text_list = textwrap.wrap(string, max_width)
+    return_string = ""
+    for elem in wrapped_text_list:
+        return_string += (elem + "\n")
+    return return_string
