@@ -25,3 +25,23 @@ def mutate_string(string, position, character):
     # slice and join
     constring = string[:position] + character + string[position+1:]
     return constring
+
+def aadlu(s):
+    s = input()
+    alnum = False
+    alpha = False
+    digit = False
+    lower = False
+    upper = False
+    for elem in s:
+        if elem.isalnum():
+            alnum = True
+        if elem.isalpha():
+            alpha = True
+        if elem.isdigit():
+            digit = True
+        if elem.islower():
+            lower = True
+        if elem.isupper():
+            upper = True
+    return(alnum, alpha, digit, lower, upper)
